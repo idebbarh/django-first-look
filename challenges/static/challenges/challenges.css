@@ -1,0 +1,12 @@
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+ul > li {
+  list-style: none;
+}
+
+ul > li > a {
+  text-decoration: none;
+}

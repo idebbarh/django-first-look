@@ -1,5 +1,5 @@
 {%extends "base.html"%} {%block page_title%}{{month_name}} challenge{%endblock%}
-{%block page_content%}
+{%block page_content%} {%include "challenges/partials/header.html"%}
 <h1>{{month_name|title}} challenge is :</h1>
 <p>{{challenge}}</p>
 {%endblock page_content%}

@@ -1,4 +1,4 @@
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http import  HttpResponse, HttpResponseRedirect
 from django.template.loader import render_to_string
 
 challenges = {
@@ -31,7 +31,7 @@ def month_challenge_by_number(_, num):
     if num > 0 and num <= len(months):
         return HttpResponseRedirect(months[num - 1])
     else:
-        return HttpResponseNotFound(b"Unvalid month number")
+        return HttpResponseRedirect("/NotFound") 
 
 
 def month_challenge(_, month):
@@ -43,5 +43,5 @@ def month_challenge(_, month):
         })
         return HttpResponse(response_data)
     else:
-        return HttpResponseNotFound(b"Unvalid month name")
+        return HttpResponseRedirect("/NotFound") 
 
