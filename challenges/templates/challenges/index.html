@@ -1,0 +1,9 @@
+{%extends "base.html"%} {%block page_title%}all months{%endblock page_title%}
+{%block page_content%}
+<h1>All Months:</h1>
+<ul>
+  {% for month in months%}
+  <li><a href="{{month}}">{{month|title}}</a></li>
+  {%endfor %}
+</ul>
+{%endblock page_content%}
